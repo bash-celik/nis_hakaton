@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OfferFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/vatromet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/top_bar"
+        android:src="@drawable/ic_fireworks"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/dobro_vece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dobro_vece"
+        android:layout_below="@id/vatromet"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/dobro_vece"
+        />
+
+    <Button
+        android:id="@+id/nastavi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#17C1AB"
+        android:text="nastavi do kase"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/recycler"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+</RelativeLayout>
+
+
+</FrameLayout>

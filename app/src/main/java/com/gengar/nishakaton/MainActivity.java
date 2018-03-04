@@ -7,9 +7,18 @@ import android.os.Build;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
+import com.gengar.nishakaton.network.ApiUtill;
+import com.gengar.nishakaton.pojo.PostPump;
 import com.gengar.nishakaton.service.PopUpService;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,5 +39,9 @@ public class MainActivity extends AppCompatActivity {
             Intent popUp = new Intent(this, PopUpService.class);
             startService(popUp);
         }
+
     }
+
+
+
 }
