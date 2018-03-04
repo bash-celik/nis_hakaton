@@ -83,7 +83,7 @@ public class PopUpService extends Service {
             public void onClick(View view) {
                 Intent popUp = new Intent(getApplicationContext(), QrService.class);
                 startService(popUp);
-                //stopSelf();
+                stopSelf();
             }
         });
 
