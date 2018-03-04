@@ -10,9 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gengar.nishakaton.pojo.PostPump;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -46,12 +48,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         private TextView naziv,popust;
         private Button prihvatam;
+        private ImageView avatar;
 
         public Popust(final View itemView) {
             super(itemView);
             naziv = itemView.findViewById(R.id.naziv);
             popust = itemView.findViewById(R.id.popust);
             prihvatam = itemView.findViewById(R.id.prihvatam);
+            avatar = itemView.findViewById(R.id.image);
 
             prihvatam.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -77,6 +81,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         PostPump current = list.get(position);
         ((Popust)holder).popust.setText(current.getDiscount());
         ((Popust) holder).naziv.setText(current.getName());
+
+        Picasso.with(context).load(current.getImageUrl()).into(((Popust) holder).avatar);
 
 
     }

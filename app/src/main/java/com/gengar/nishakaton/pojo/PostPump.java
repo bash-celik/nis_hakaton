@@ -3,6 +3,8 @@ package com.gengar.nishakaton.pojo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class PostPump {
 
@@ -20,19 +22,19 @@ public class PostPump {
     private String description;
     @SerializedName("prize")
     @Expose
-    private Double prize;
+    private Integer prize;
     @SerializedName("discount")
     @Expose
     private String discount;
-    @SerializedName("date")
-    @Expose
-    private Double date;
     @SerializedName("qr")
     @Expose
     private String qr;
     @SerializedName("token")
     @Expose
     private String token;
+    @SerializedName("image_url")
+    @Expose
+    private String imageUrl;
 
     public String getId() {
         return id;
@@ -66,11 +68,11 @@ public class PostPump {
         this.description = description;
     }
 
-    public Double getPrize() {
+    public Integer getPrize() {
         return prize;
     }
 
-    public void setPrize(Double prize) {
+    public void setPrize(Integer prize) {
         this.prize = prize;
     }
 
@@ -80,14 +82,6 @@ public class PostPump {
 
     public void setDiscount(String discount) {
         this.discount = discount;
-    }
-
-    public Double getDate() {
-        return date;
-    }
-
-    public void setDate(Double date) {
-        this.date = date;
     }
 
     public String getQr() {
@@ -104,6 +98,14 @@ public class PostPump {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
 }
