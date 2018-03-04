@@ -22,8 +22,8 @@
 
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/sendvic"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/image"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="8dp"
                 android:text="NIS sendvic"
                 android:layout_marginTop="29dp"
                 android:textStyle="italic|bold"
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/image"
                 android:layout_below="@id/naziv"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="2dp"
                 android:text="20% popusta"
                 android:textSize="16sp"
