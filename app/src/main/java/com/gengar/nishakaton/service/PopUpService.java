@@ -1,5 +1,6 @@
 package com.gengar.nishakaton.service;
 
+import android.app.Fragment;
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.PixelFormat;
@@ -9,6 +10,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 
 import com.gengar.nishakaton.R;
 
@@ -46,6 +48,16 @@ public class PopUpService extends Service {
         manager = (WindowManager) getSystemService(WINDOW_SERVICE);
         manager.addView(popup,params);
 
+        ImageButton close = popup.findViewById(R.id.close);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopSelf();
+            }
+        });
+
+
+        
 
     }
 
