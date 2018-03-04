@@ -13,6 +13,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.gengar.nishakaton.MainActivity;
@@ -74,6 +75,17 @@ public class PopUpService extends Service {
 
 
         goGetOffer();
+
+        Button doKase = popup.findViewById(R.id.nastavi);
+
+        doKase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent popUp = new Intent(getApplicationContext(), QrService.class);
+                startService(popUp);
+                //stopSelf();
+            }
+        });
 
 
     }

@@ -72,7 +72,7 @@
                 android:id="@+id/dobro_vece"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dobro_vece"
+                android:text="@string/poruka"
                 android:layout_below="@id/vatromet"
                 android:layout_centerHorizontal="true"
                 android:textSize="20sp"
@@ -83,19 +83,22 @@
                 android:textColor="@android:color/holo_blue_dark"
                 />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/qr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:src="@drawable/qr"
+                android:layout_below="@id/dobro_vece"
+                android:layout_centerHorizontal="true"/>
 
             <Button
                 android:id="@+id/nastavi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/holo_red_light"
-                android:text="nastavi do kase"
+                android:text="zavrsi"
                 android:textColor="@android:color/white"
-                android:layout_below="@id/recycler"
+                android:layout_below="@id/qr"
                 android:layout_centerHorizontal="true"
 
                 />
